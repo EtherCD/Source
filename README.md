@@ -1,18 +1,21 @@
 <div align="center"> 
 <h1>My NixOS configuration</h1>
-<img src="./stuff/icons/favicon.png" width="64">
+<img src="./stuff/icons/favicon.png" width="128">
 <p>Simple configuration, maded by dreamer</p>
 <b>Version of NixOS 24.05, gruvbox styled</b>
 </div>
 
 ## Machines
+
 This configuration is not finished yet. And i configured only for my PC:
 
 ### Source
+
 Essentially the most standard configuration, only with all the programs I need, without a specific DE
 
 ### Aether
-PC Configuration, with plasma6 
+
+PC Configuration, with plasma6
 
 `I should definitely make the plasma6 configuration reproducible`
 
@@ -24,7 +27,7 @@ For my laptop, still not written...
 
 1. Generate configuration
 
-    This is necessary for Nix to create `hardware-configuraiton.nix`
+   This is necessary for Nix to create `hardware-configuraiton.nix`
 
 2. Clone repository, and change `configuration.nix`
 
@@ -37,6 +40,7 @@ For my laptop, still not written...
 ```
 
 3. Don't forget change in `flake.nix` this line:
+
 ```nix
 18 | 		nixosConfigurations.aether = nixpkgs.lib.nixosSystem {
 ```
@@ -51,14 +55,14 @@ to
 
 **If you find bug or something like that, create issue on this repository!**
 
-*If, of course, this configuration will be useful to someone..*
+_If, of course, this configuration will be useful to someone.._
 
 ## Wallpapers
 
 This is my special power!
 
 <details>
-  <summary>Six Full HD wallpapers</summary>
+  <summary><b>Six Full HD wallpapers</b></summary>
 
 ![Not loaded wallpaper for Eos :(](./stuff/wallpapers/Eos-0.png)
 

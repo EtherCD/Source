@@ -15,7 +15,7 @@
 	};
 
 	outputs = {nixpkgs, home-manager, pipewire-screenaudio, plasma-manager, ...} @ inputs: {
-		nixosConfigurations.noid = nixpkgs.lib.nixosSystem {
+		nixosConfigurations.aether = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			specialArgs = { inherit inputs; };
 			modules = [ 

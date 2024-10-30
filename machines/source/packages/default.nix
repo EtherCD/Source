@@ -19,7 +19,7 @@
 		obs-studio
 		obsidian
 		firefox
-		spotify
+		
 		figma-linux
 		steam
 		vesktop
@@ -51,6 +51,7 @@
 		ninja
 		cmake
 		clang_12
+		gh
 
 		pipewire
 		pulseaudio

@@ -36,6 +36,17 @@ For my laptop, still not written...
 }
 ```
 
+3. Don't forget change in `flake.nix` this line:
+```nix
+18 | 		nixosConfigurations.aether = nixpkgs.lib.nixosSystem {
+```
+
+to
+
+```nix
+18 | 		nixosConfigurations.<machine name config> = nixpkgs.lib.nixosSystem {
+```
+
 3. And build!
 
 **If you find bug or something like that, create issue on this repository!**

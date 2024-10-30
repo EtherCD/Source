@@ -66,6 +66,10 @@ This is my special power!
 
 ![Not loaded wallpaper for Eos :(](./stuff/wallpapers/Eos-0.png)
 
+![Not loaded wallpaper for Eos :(](./stuff/wallpapers/Eos-1.png)
+
+![Not loaded wallpaper for Eos :(](./stuff/wallpapers/Eos-2.png)
+
 ![Not loaded wallpaper for Aether :(](./stuff/wallpapers/Aether-0.png)
 
 ![Not loaded wallpaper for Aether :(](./stuff/wallpapers/Aether-1.png)

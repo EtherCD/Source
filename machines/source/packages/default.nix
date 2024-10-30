@@ -19,7 +19,7 @@
 		obs-studio
 		obsidian
 		firefox
-		
+		spotify
 		figma-linux
 		steam
 		vesktop

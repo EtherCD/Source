@@ -9,6 +9,7 @@
 			autoLogin.user = "ethercd";
 		};
 
+
 		libinput = {
 			enable = true;
 			mouse.accelProfile = "flat";

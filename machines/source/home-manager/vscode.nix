@@ -3,7 +3,7 @@ let
     pkgs = import <nixpkgs> {};
     fontFamily = "FantasqueSansM Nerd Font";
     fontSize = 18;
-    theme = "gruvboxConcoctis dark hard";
+    theme = "gruvboxConcoctis light hard";
 
 in
 
@@ -23,6 +23,12 @@ in
             antfu.icons-carbon
             equinusocio.vsc-material-theme-icons
         ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+            {
+                name = "vscode-glsl";
+                publisher = "GeForceLegend";
+                version = "0.3.2";
+                sha256 = "sha256-wk6BnSzs4Ifx/iuVwan9FAJjnMEDMOwqF01Iw/Nvmsk=";
+            }
             {
                 name = "aldrico-s-gruvbox";
                 publisher = "HeavenAldrico";
@@ -65,6 +71,18 @@ in
                 version = "0.0.6";
                 sha256 = "sha256-IS1vUrecChj9Iz0CJ+Rfm/PSEuZn2Cwa/DQIYVPQroM=";
             }
+            {
+                name = "vscode-great-icons";
+                publisher = "emmanuelbeziat";
+                version = "2.1.112";
+                sha256 = "sha256-gG6QUY3enEatllPz97O8Aj7zjrEv709xNpDaQIYIrEU=";
+            }
+            {
+                name = "motoralfa-truco";
+                publisher = "Motoralfa";
+                version = "0.0.2";
+                sha256 = "sha256-eiMDrppefLyYU9aJ86iAQrcfdUREkS8utiEbeFdyLZY=";
+            }
         ];
 
         userSettings = {
@@ -93,9 +111,9 @@ in
             "terminal.integrated.fontSize" = fontSize;
             
             
-            "workbench.iconTheme" = "eq-material-theme-icons-light";
+            "workbench.iconTheme" = "vscode-great-icons";
             "workbench.panel.defaultLocation" = "right";
-            "workbench.productIconTheme" = "icons-carbon";
+            "workbench.productIconTheme" = "vscode-great-icons";
             "workbench.tree.enableStickyScroll" = false;
             "workbench.layoutControl.enabled" = false;
             "workbench.activityBar.location" = "top";
@@ -139,6 +157,9 @@ in
             "discord.detailsIdling" = "Just fell asleep";
             "discord.detailsEditing" = "Editing {dir_name}/{file_name}";
             "discord.smallImage" = "Codding Abyss";
+            "editor.mouseWheelScrollSensitivity" = 2;
+            "editor.smoothScrolling" = true;
         };
     };
+
 }

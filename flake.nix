@@ -8,13 +8,9 @@
 			url = "github:nix-community/home-manager/release-24.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
-		pipewire-screenaudio.url = "github:IceDBorn/pipewire-screenaudio";
-
-		plasma-manager.url = "github:nix-community/plasma-manager";
 	};
 
-	outputs = {nixpkgs, home-manager, pipewire-screenaudio, plasma-manager, ...} @ inputs: {
+	outputs = {nixpkgs, home-manager, ...} @ inputs: {
 		nixosConfigurations.aether = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			specialArgs = { inherit inputs; };

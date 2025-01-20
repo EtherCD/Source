@@ -11,7 +11,7 @@
 		xserver = {
 			enable = true;
             windowManager.dwm.enable = true;
-            windowManager.dwm.package = pkgs.dwm.override {
+            windowManager.dwm.package = pkgs.dwm.overrideAttrs {
                 src = ./dmw;
             };
 

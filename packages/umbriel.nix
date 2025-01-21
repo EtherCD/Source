@@ -1,3 +1,5 @@
+# Packages for Umbriel
+
 { inputs, pkgs, ... }: {
 	nixpkgs.config = {
 		allowUnfree = true;
@@ -15,37 +17,12 @@
 	# Here stuff for all machines 
 
 	environment.systemPackages = with pkgs; [
-		audacity
-		obs-studio
-		obsidian
-		firefox
-		spotify
-		figma-linux
-		steam
-		vesktop
-		audacity
-		haguichi
+    alacritty
 
-		# Util Stuff
-		flameshot
-		upscayl
-		vlc
-
-		# Coding
-		vscode
-		jetbrains.idea-community
-		jetbrains.webstorm
-
-
-		# Coding stuff
-		mongodb-compass
-		docker
-		bun
 		gnumake
 		yarn
 		wget
 		gcc
-		ffmpeg
 		nodejs
 		cargo
 		rustc
@@ -53,40 +30,19 @@
 		cmake
 		gh
 
-		pipewire
-		pulseaudio
-		pamixer
-		amdgpu_top
-
 		python311
 
-		libsForQt5.qt5.qtwebsockets
-		libsForQt5.qt5.qtwebchannel
-		libsForQt5.qt5.qtdeclarative
-
 		home-manager
-		(import ./spotify-adblock.nix)
-		(import ./beefetch.nix)
+		(import ./beefetch)
 	];
 
 
-	programs.java = { enable = true; package = pkgs.openjdk22; };
-
-	programs.steam = {
-		enable = true;
-	};
-	
 	home-manager = {
-		useGlobalPkgs = true;
+		useGlobalPkgs = false;
 	};
 
 	fonts.packages = with pkgs; [
-		jetbrains-mono
-		noto-fonts
-		noto-fonts-emoji
-		twemoji-color-font
 		font-awesome
 		(nerdfonts.override { fonts = ["FantasqueSansMono"]; })
-		comic-relief
 	];
 }

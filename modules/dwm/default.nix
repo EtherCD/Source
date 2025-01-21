@@ -10,10 +10,10 @@
 
 		xserver = {
 			enable = true;
-            windowManager.dwm.enable = true;
-            windowManager.dwm.package = pkgs.dwm.overrideAttrs {
-                src = ./dmw;
-            };
+      windowManager.dwm.enable = true;
+      windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+    		src = builtins.path { name = "dwm"; path = ./.; };
+      };
 
 			xkb.layout = "us,ru";
 			xkb.options = "grp:alt_shift_toggle";

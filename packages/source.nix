@@ -1,3 +1,5 @@
+# Packages for Source
+
 { inputs, pkgs, ... }: {
 	nixpkgs.config = {
 		allowUnfree = true;
@@ -15,12 +17,37 @@
 	# Here stuff for all machines 
 
 	environment.systemPackages = with pkgs; [
-        alacritty
+		audacity
+		obs-studio
+		obsidian
+		firefox
+		spotify
+		figma-linux
+		steam
+		vesktop
+		audacity
+		haguichi
 
+		# Util Stuff
+		flameshot
+		upscayl
+		vlc
+
+		# Coding
+		vscode
+		jetbrains.idea-community
+		jetbrains.webstorm
+
+
+		# Coding stuff
+		mongodb-compass
+		docker
+		bun
 		gnumake
 		yarn
 		wget
 		gcc
+		ffmpeg
 		nodejs
 		cargo
 		rustc
@@ -28,19 +55,36 @@
 		cmake
 		gh
 
+		pipewire
+		pulseaudio
+		pamixer
+		amdgpu_top
+
 		python311
 
 		home-manager
-		(import ../../source/packages/beefetch.nix)
+		(import ./spotify-adblock)
+		(import ./beefetch)
 	];
 
 
+	programs.java = { enable = true; package = pkgs.openjdk22; };
+
+	programs.steam = {
+		enable = true;
+	};
+	
 	home-manager = {
-		useGlobalPkgs = false;
+		useGlobalPkgs = true;
 	};
 
 	fonts.packages = with pkgs; [
+		jetbrains-mono
+		noto-fonts
+		noto-fonts-emoji
+		twemoji-color-font
 		font-awesome
 		(nerdfonts.override { fonts = ["FantasqueSansMono"]; })
+		comic-relief
 	];
 }

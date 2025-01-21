@@ -1,8 +1,10 @@
 {
   imports = [
-    ../../hardware-configuration.nix
-    ./modules
-    ./packages
+    ./hardware-configuration.nix
+    ../../modules/dwm
+    ../../modules/boot
+    ../../modules/network
+    ../../packages/umbriel.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -19,7 +21,7 @@
 
   users.users.ethercd = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" "netwrokmanager" ]; 
+    extraGroups = [ "wheel" "input" "networkmanager" ]; 
   };
   i18n.defaultLocale = "en_US.UTF-8";
 

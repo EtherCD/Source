@@ -20,7 +20,7 @@
 				{
 					home-manager.useGlobalPkgs = true;
 					home-manager.useUserPackages = true;
-					home-manager.users.ethercd = import ./machines/source/home-manager;
+					home-manager.users.ethercd = import ./home-manager/source;
 				}
 			];
 		};

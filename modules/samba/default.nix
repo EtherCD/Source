@@ -4,8 +4,8 @@
     securityType = "user";
     openFirewall = true;
     extraConfig = ''
-      server string = ${config.networking.hostName}
-      netbios name = ${config.networking.hostName}
+      server string = umbriel
+      netbios name = umbriel
       workgroup = WORKGROUP
       security = user
 
@@ -16,8 +16,6 @@
       follow symlinks = yes
 
       # :NOTE| localhost is the ipv6 localhost ::1
-      hosts allow = 192.168.0.0/16 localhost
-      hosts deny = 0.0.0.0/0
       guest account = nobody
       map to guest = bad user
     '';

@@ -4,6 +4,7 @@
     ../../modules/dwm
     ../../modules/boot
     ../../modules/ssh
+    ../../modules/samba
     ../../packages/umbriel.nix
   ];
 

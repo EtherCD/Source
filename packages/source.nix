@@ -78,13 +78,17 @@
 		useGlobalPkgs = true;
 	};
 
+	programs.zsh = {
+		enable = true;
+	};
+
 	fonts.packages = with pkgs; [
 		jetbrains-mono
 		noto-fonts
 		noto-fonts-emoji
 		twemoji-color-font
 		font-awesome
-		(nerdfonts.override { fonts = ["FantasqueSansMono"]; })
+		(nerdfonts.override { fonts = ["FantasqueSansMono" "NerdFontsSymbolsOnly"]; })
 		comic-relief
 	];
 }

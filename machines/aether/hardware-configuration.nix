@@ -26,7 +26,7 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  fileSystems."/mnt/share" = {
+  fileSystems."/srv/share" = {
     device = "//192.168.1.104/shared";
     fsType = "cifs";
     options = let

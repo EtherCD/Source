@@ -8,6 +8,7 @@
 			firefox
 			vscode
 			vlc
+			kitty
 		];
 	};
 
@@ -17,12 +18,13 @@
 			./firefox
 			./vscode
 			./obs-studio
+			./kitty
 		];
 
 	programs.zsh = {
 		enable = true;
 		enableCompletion = true;
-    syntaxHighlighting.enable = true;
+    	syntaxHighlighting.enable = true;
 		shellAliases = {
 			rebuild = "sudo nixos-rebuild switch --impure";
 			rcode = "sudo code --no-sandbox --user-data-dir=/home/ex-root/";

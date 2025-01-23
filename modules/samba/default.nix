@@ -15,7 +15,6 @@
       force directory mode = 0775
       follow symlinks = yes
 
-      # :NOTE| localhost is the ipv6 localhost ::1
       guest account = nobody
       map to guest = bad user
     '';
@@ -24,9 +23,7 @@
         path = "/shared"; 
         writable = true;
         "read only" = "no";
-        "guest ok" = "no";
-        "force user" = "ethercd";
-        "force group" = "samba";
+        "guest ok" = "yes";
         "write list" = "ethercd";
       };
     };

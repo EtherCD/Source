@@ -1,13 +1,19 @@
+let
+
+pkgs = import <nixpkgs> {}; 
+
+in 
+
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/plasma6
-    ../../modules/xanmod
-    ../../modules/boot
-    ../../modules/plymouth
+    ../../packages/source.nix
     ../../modules/sound
     ../../modules/trim
-    ../../packages/source.nix
+    ../../modules/plymouth
+    ../../modules/boot
+    ../../modules/plasma6
+    ../../modules/xanmod
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -24,6 +30,7 @@
 
   users.users.ethercd = {
     isNormalUser = true;
+    shell = pkgs.zsh;
     extraGroups = [ "wheel" "input" "networkmanager" ]; 
   };
   i18n.defaultLocale = "en_US.UTF-8";

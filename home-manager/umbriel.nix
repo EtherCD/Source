@@ -10,7 +10,6 @@
 			./git
 		];
 
-
 	programs.zsh = {
 		enable = true;
 		enableCompletion = true;
@@ -25,7 +24,6 @@
       theme = "jaischeema";
     };
 	};
-
 	
 	programs.home-manager = {
 		enable = true;

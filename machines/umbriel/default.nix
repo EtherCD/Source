@@ -3,12 +3,16 @@
     ./hardware-configuration.nix
     ../../modules/dwm
     ../../modules/boot
-    ../../modules/network
+    ../../modules/ssh
     ../../packages/umbriel.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      device = "/dev/sda";
+    }
+  }
 
   networking.networkmanager.enable = true;
   time.timeZone = "Pacific/Auckland";
@@ -22,6 +26,7 @@
   users.users.ethercd = {
     isNormalUser = true;
     extraGroups = [ "wheel" "input" "networkmanager" ]; 
+    shell = pkgs.zsh;
   };
   i18n.defaultLocale = "en_US.UTF-8";
 

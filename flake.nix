@@ -1,3 +1,5 @@
+let 
+
 {
 	description = "Aether";
 
@@ -20,7 +22,7 @@
 				{
 					home-manager.useGlobalPkgs = true;
 					home-manager.useUserPackages = true;
-					home-manager.users.ethercd = import ./home-manager/source;
+					home-manager.users.ethercd = import ./home-manager/source.nix;
 				}
 			];
 		};

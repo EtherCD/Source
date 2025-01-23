@@ -19,15 +19,9 @@
 	environment.systemPackages = with pkgs; [
     alacritty
 
-		gnumake
 		yarn
 		wget
-		gcc
 		nodejs
-		cargo
-		rustc
-		ninja
-		cmake
 		gh
 
 		python311
@@ -36,12 +30,18 @@
 		(import ./beefetch)
 	];
 
+	programs.zsh = {
+		enable = true;
+	}
 
 	home-manager = {
-		useGlobalPkgs = false;
+		useGlobalPkgs = true;
 	};
 
 	fonts.packages = with pkgs; [
+		jetbrains-mono
+		noto-fonts
+		twemoji-color-font
 		font-awesome
 		(nerdfonts.override { fonts = ["FantasqueSansMono"]; })
 	];

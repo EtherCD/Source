@@ -1,3 +1,9 @@
+let
+
+pkgs = import <nixpkgs> {}; 
+
+in 
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -12,8 +18,8 @@
     grub = {
       enable = true;
       device = "/dev/sda";
-    }
-  }
+    };
+  };
 
   networking.networkmanager.enable = true;
   time.timeZone = "Pacific/Auckland";

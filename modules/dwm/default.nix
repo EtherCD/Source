@@ -14,7 +14,10 @@
         enable = true;
         package = pkgs.dwm.override {
           patches = [
-          	(pkgs.fetchpatch { url = "https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.4.diff"; hash = "sha256-+OXRqnlVeCP2IhcCP2Ihco+J7s5BQPpwFyRRf8lnVsN7rm+Cc="; })
+          	(pkgs.fetchpatch {
+							url = "https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.4.diff"; 
+							hash = "sha256-+OXRqnlVeCP2Ihco+J7s5BQPpwFyRRf8lnVsN7rm+Cc="; 
+						})
           ];
         };
       };

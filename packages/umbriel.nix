@@ -17,7 +17,7 @@
 	# Here stuff for all machines 
 
 	environment.systemPackages = with pkgs; [
-    alacritty
+		alacritty
 
 		yarn
 		wget
@@ -32,7 +32,7 @@
 
 	programs.zsh = {
 		enable = true;
-	}
+	};
 
 	home-manager = {
 		useGlobalPkgs = true;

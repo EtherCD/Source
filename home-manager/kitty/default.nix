@@ -1,6 +1,6 @@
 let 
 
-    pkgs = import <nixpkgs> {};
+	pkgs = import <nixpkgs> {};
 
 in
 
@@ -22,8 +22,10 @@ in
 
         settings = {
             dynamic_background_opacity = true;
-            background_opacity = "0.3";
-            background_blur = 5;
+            background_opacity = "0.7";
+            background_tint = "0.5";
+            #transparent_background_colors = "#282828@0.3";
+            background_blur = 20;
             window_padding_width = 10;
             font_family = "Fantasque Sans Mono";
             font_size = 14;
@@ -35,6 +37,24 @@ in
             tab_bar_edge = "top";
             term = "xterm-256color";
             copy_on_select = "clipboard";
+
+            color0 = "#282828";
+            color1 = "#cc241d";
+            color2 = "#98971a";
+            color3 = "#d79921";
+            color4 = "#458588";
+            color5 = "#b16286";
+            color6 = "#689d6a";
+            color7 = "#928374";
+            color8 = "#ebdbb2";
+            color9 = "#fb4934";
+            color10 = "#b8bb26";
+            color11 = "#fabd2f";
+            color12 = "#83a598";
+            color13 = "#d3869b";
+            color14 = "#8ec07c";
+            color15 = "#fbf1c7";
+
         };
     };
 }

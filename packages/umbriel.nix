@@ -20,10 +20,16 @@
 		alacritty
 
 		yarn
+		gcc
+		gnumake
+		cmake
 		wget
 		nodejs
 		gh
 
+		fastfetch
+		htop
+		btop
 		python311
 
 		home-manager

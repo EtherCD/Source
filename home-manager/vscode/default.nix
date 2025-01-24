@@ -3,7 +3,7 @@ let
     pkgs = import <nixpkgs> {};
     fontFamily = "FantasqueSansM Nerd Font";
     fontSize = 18;
-    theme = "gruvboxConcoctis light hard";
+    theme = "Frantic Contrast (rainglow)";
 
 in
 
@@ -82,6 +82,12 @@ in
                 publisher = "Motoralfa";
                 version = "0.0.2";
                 sha256 = "sha256-eiMDrppefLyYU9aJ86iAQrcfdUREkS8utiEbeFdyLZY=";
+            }
+            {
+                name = "Nix";
+                publisher = "bbenoist";
+                version = "1.0.1";
+                sha256 = "sha256-qwxqOGublQeVP2qrLF94ndX/Be9oZOn+ZMCFX1yyoH0=";
             }
         ];
 

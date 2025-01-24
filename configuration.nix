@@ -1,6 +1,6 @@
 {
   imports = [
-    ./machines/aether # or source
+    ./machines/umbriel # or source
   ];
 }
 

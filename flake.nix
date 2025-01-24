@@ -11,7 +11,7 @@
 	};
 
 	outputs = {nixpkgs, home-manager, ...} @ inputs: {
-		nixosConfigurations.aether = nixpkgs.lib.nixosSystem {
+		nixosConfigurations.umbriel = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			specialArgs = { inherit inputs; };
 			modules = [ 
@@ -20,7 +20,7 @@
 				{
 					home-manager.useGlobalPkgs = true;
 					home-manager.useUserPackages = true;
-					home-manager.users.ethercd = import ./home-manager/source.nix;
+					home-manager.users.ethercd = import ./home-manager/umbriel.nix;
 				}
 			];
 		};

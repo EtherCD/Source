@@ -61,6 +61,8 @@
 		amdgpu_top
 
 		python311
+		fastfetch
+		mpv
 
 		home-manager
 		(import ./spotify-adblock)

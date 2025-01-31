@@ -13,7 +13,7 @@ in
     ../../modules/plymouth
     ../../modules/boot
     ../../modules/plasma6
-    ../../modules/xanmod
+    #../../modules/xanmod
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -37,7 +37,7 @@ in
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 
   networking.hostName = "aether";
 }

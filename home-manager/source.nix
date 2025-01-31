@@ -24,9 +24,10 @@
 	programs.zsh = {
 		enable = true;
 		enableCompletion = true;
-    	syntaxHighlighting.enable = true;
+    syntaxHighlighting.enable = true;
 		shellAliases = {
 			rebuild = "sudo nixos-rebuild switch --impure";
+			clean = "sudo nix-store --gc";
 			rcode = "sudo code --no-sandbox --user-data-dir=/home/ex-root/";
 		};
 		oh-my-zsh = {

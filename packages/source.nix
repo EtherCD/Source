@@ -6,8 +6,8 @@
 		permittedInsecurePackages = [ "electron-25.9.0" "openssl-1.1.1w" ];
 		packageOverrides = pkgs: rec {
 			nur = import (builtins.fetchTarball {
-				sha256 = "0nr4csla421yx7q74a4zca2m3sqwyawpjwqxjnf33yzlin8ld0r5";
-				url = "https://github.com/nix-community/NUR/archive/23d88faa35dc9de0e35fc3dc2a863c4cf451a8f8.tar.gz";
+				sha256 = "sha256:0j0sdnq4dkz10yjq0in4v6q6r05vbhssyzi8k6apmmz2lwpaj7r5";
+				url = "https://github.com/nix-community/NUR/archive/9fa2187952b1050eb4da2d969f0c7a267697dace.tar.gz";
 			}) {
 				inherit pkgs;
 			};
@@ -54,6 +54,8 @@
 		ninja
 		cmake
 		gh
+		dnsutils
+		nmap
 
 		pipewire
 		pulseaudio
@@ -62,7 +64,7 @@
 
 		python311
 		fastfetch
-		mpv
+		pridefetch
 
 		home-manager
 		(import ./spotify-adblock)

@@ -69,7 +69,6 @@ in {
                     adblocker-ultimate
                     darkreader
                     gruvbox-dark-theme
-                    clearurls
                     youtube-shorts-block
                 ];
             };

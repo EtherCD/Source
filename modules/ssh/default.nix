@@ -6,10 +6,10 @@
       PasswordAuthentication = true;
       AllowUsers = [ "ethercd" ];
       UseDns = true;
-      X11Forwarding = false;
+      X11Forwarding = true;
+      X11DisplayOffset = 10;
+      X11UseLocalhost = false;
       PermitRootLogin = "prohibit-password";
     };      
   };
-
-  networking.firewall.allowedTCPPorts = [ 22 9000 9001 ];
 }

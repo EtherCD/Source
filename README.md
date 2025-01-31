@@ -1,8 +1,8 @@
 <div align="center"> 
 <h1>My NixOS configuration</h1>
 <img src="./stuff/icons/favicon.png" width="64">
-<p>Simple configuration, maded by dreamer</p>
-<b>Version of NixOS 24.05, gruvbox styled</b>
+<p>Simple configuration, made by dreamer</p>
+<b>Version of NixOS 24.11, gruvbox styled</b>
 </div>
 
 ## Structure
@@ -21,7 +21,7 @@ This configuration is not finished yet.
 
 ### Aether
 
-This is for my PC Configuration, with plasma6
+This is my PC Configuration, with plasma6
 
 `I should definitely make the plasma6 configuration reproducible`
 
@@ -45,29 +45,9 @@ Uses dwm, and minimal set of programs
 
 2. Clone repository, and change `configuration.nix`
 
-   Copy your `hardware-configuration.nix` to path of the selected configuration
+   Copy your `hardware-configuration.nix` to path of the selected machine
 
-```nix
-{
-  imports = [
-    ./machines/<machine name config>
-  ];
-}
-```
-
-3. Don't forget change in `flake.nix` this line:
-
-```nix
-18 | 		nixosConfigurations.aether = nixpkgs.lib.nixosSystem {
-```
-
-to
-
-```nix
-18 | 		nixosConfigurations.<machine name config> = nixpkgs.lib.nixosSystem {
-```
-
-3. And build!
+3. And build with flag `--flake .#<machine>`!
 
 **If you find bug or something like that, create issue on this repository!**
 
@@ -75,12 +55,18 @@ _If, of course, this configuration will be useful to someone.._
 
 ## Wallpapers
 
-This is my special power!
+I made some wallpapers for all machines.
+
+<a href="./stuff/wallpapers/svg">Link to svg</a>
 
 <details>
   <summary>Full HD Wallpapers</summary>
 
-![Not loaded wallpaper for Eos :(](./stuff/wallpapers/Umbriel-0.png)
+Yeah wallpapers on server. Why not?
+
+![Not loaded wallpaper for Umbriel :(](./stuff/wallpapers/Umbriel-0.png)
+
+![Not loaded wallpaper for Umbriel :(](./stuff/wallpapers/Umbriel-1.png)
 
 ![Not loaded wallpaper for Eos :(](./stuff/wallpapers/Eos-0.png)
 

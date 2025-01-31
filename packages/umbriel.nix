@@ -14,8 +14,6 @@
 		};
 	};
 
-	# Here stuff for all machines 
-
 	environment.systemPackages = with pkgs; [
 		alacritty
 

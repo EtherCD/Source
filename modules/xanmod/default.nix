@@ -12,7 +12,6 @@
             url = "https://gitlab.com/xanmod/linux/-/archive/${version}/linux-${version}.tar.gz";
             hash = "sha256-fp9+HyWAwzjiDC0pVi6/zTaOzb6orHMEZO9D34xyzOE=";
           };
-          kernelPatches = [];
 
           nativeBuildInputs = with pkgs; [
             coreutils

@@ -24,9 +24,11 @@ in
 
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  }; 
+    dates = "daily";
+  };
+
+  nix.settings.auto-optimise-store = true;
+
 
   users.users.ethercd = {
     isNormalUser = true;

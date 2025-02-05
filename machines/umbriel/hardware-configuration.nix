@@ -14,18 +14,24 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-label/ROOT";
+    { device = "/dev/disk/by-label/NIXROOT";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-label/BOOT";
+    { device = "/dev/disk/by-label/NIXBOOT";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
+ 
+  fileSystems."/srv/samba" = 
+    { device = "/dev/disk/by-label/SAMBA";
+      fsType = "btrfs";
+      options = [ "space_cache=v2" "compress=zstd" "autodefrag" "noatime" ];
+    };
 
   swapDevices = [
-    { device = "/var/swapfile"; size = 2048; }
+    { device = "/dev/disk/by-label/SWAP"; }
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

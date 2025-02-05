@@ -20,23 +20,17 @@
 		audacity
 		obs-studio
 		obsidian
-		firefox
 		spotify
-		figma-linux
 		steam
 		vesktop
-		audacity
-		haguichi
 
 		# Util Stuff
 		flameshot
 		upscayl
-		vlc
 
 		# Coding
 		vscode
 		jetbrains.idea-community
-		jetbrains.webstorm
 
 
 		# Coding stuff
@@ -57,22 +51,22 @@
 		dnsutils
 		nmap
 
-		pipewire
-		pulseaudio
-		pamixer
 		amdgpu_top
 
 		python311
-		fastfetch
-		pridefetch
 
 		home-manager
 		(import ./spotify-adblock)
 		(import ./beefetch)
+		
+		doas
 	];
 
+	imports = [
+		./doas
+	];
 
-	programs.java = { enable = true; package = pkgs.openjdk22; };
+	programs.java = { enable = true; package = pkgs.jdk17; };
 
 	programs.steam = {
 		enable = true;

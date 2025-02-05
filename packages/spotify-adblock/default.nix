@@ -9,9 +9,9 @@ pkgs.rustPlatform.buildRustPackage rec {
     version = "1.0.3";
 
     src = builtins.fetchTarball {
-		  sha256 = "0wvw4vcj0qc08s1dcrdyq2qr243p9cq2i8hw05d7qnfhgw1cjdis";
+      sha256 = "0wvw4vcj0qc08s1dcrdyq2qr243p9cq2i8hw05d7qnfhgw1cjdis";
       url = "https://github.com/abba23/spotify-adblock/archive/7391666109c8f9d0ccc8254dc0ff7e28139c663b.tar.gz";
-	  };
+    };
 
     cargoHash = "sha256-wPV+ZY34OMbBrjmhvwjljbwmcUiPdWNHFU3ac7aVbIQ=";
 

@@ -17,6 +17,7 @@ in
             map ctrl+t new_tab
             map ctrl+q close_tab
             map ctrl+tab next_tab
+            map ctrl+shift+c copy_or_interrupt
         '';
 
 
@@ -33,7 +34,8 @@ in
             cursor_text_color = "#b8bb26";
             cursor_shape = "block";
             cursor_blink_interval = "0.5";
-            cursor_trail = true;
+            cursor_trail = "3";
+            cursor_trail_decay = "0.1 0.4";
             tab_bar_edge = "top";
             term = "xterm-256color";
             copy_on_select = "clipboard";

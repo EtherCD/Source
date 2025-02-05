@@ -25,7 +25,7 @@
       xkb.layout = "us,ru";
       xkb.options = "grp:alt_shift_toggle";
 
-      videoDrivers = [ "intel" ];
+      videoDrivers = [ "modesetting" ];
     };
 	};
 }

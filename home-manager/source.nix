@@ -5,10 +5,17 @@
 		stateVersion = "24.05";
 		
 		packages = with pkgs; [
-			firefox
 			vscode
 			vlc
 			kitty
+			lsd
+			bat
+			btop
+			fzf
+			viber
+			fastfetch
+			cpufetch
+			nerdfetch
 		];
 	};
 
@@ -19,6 +26,8 @@
 			./vscode
 			./obs-studio
 			./kitty
+			./lsd
+			./bat
 		];
 
 	programs.zsh = {
@@ -26,9 +35,14 @@
 		enableCompletion = true;
     syntaxHighlighting.enable = true;
 		shellAliases = {
-			rebuild = "sudo nixos-rebuild switch --impure";
-			clean = "sudo nix-store --gc";
-			rcode = "sudo code --no-sandbox --user-data-dir=/home/ex-root/";
+			rebuild = "doas nixos-rebuild switch --impure";
+			clean = "doas nix-store --gc";
+			rcode = "doas code --no-sandbox --user-data-dir=/home/ex-root/";
+			ls = "lsd";
+			l = "lsd -l";
+			t = "lsd --tree --depth";
+			c = "bat";
+			#cat = "bat";
 		};
 		oh-my-zsh = {
       enable = true;

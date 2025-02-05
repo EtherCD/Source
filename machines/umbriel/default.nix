@@ -14,21 +14,18 @@ in
     ../../packages/umbriel.nix
   ];
 
-  boot.loader = {
-    grub = {
-      enable = true;
-      device = "/dev/sda";
-    };
-  };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.networkmanager.enable = true;
   time.timeZone = "Pacific/Auckland";
 
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
+    dates = "daily";
   };
+
+  nix.settings.auto-optimise-store = true;
 
   networking.firewall.allowedTCPPorts = [ 22 445 139 ];
 
@@ -41,7 +38,7 @@ in
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 
   networking.hostName = "umbriel";
 }

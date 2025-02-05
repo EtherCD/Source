@@ -7,12 +7,12 @@ in
 pkgs.stdenv.mkDerivation
 {
     pname = "beefetch";
-    version = "1.1.2";
+    version = "1.1.4";
     src = pkgs.fetchFromGitHub {
         owner = "mirdukkkkk";
         repo = "beefetch";
-        rev = "1.1.2";
-        hash = "sha256-+UGs4/dU30NEyxkxtCiZGfOmYVMQdtCDhYFx6UnJq0w=";
+        rev = "1.1.4";
+        hash = "sha256-D8IjGGRIeHhDL2jfdxTQWKtTvSmH8XUXI6pRvVXVzfU=";
     };
 
     installPhase = ''

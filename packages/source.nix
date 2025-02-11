@@ -66,7 +66,7 @@
 		./doas
 	];
 
-	programs.java = { enable = true; package = pkgs.jdk17; };
+	programs.java = { enable = true; package = pkgs.jdk23; };
 
 	programs.steam = {
 		enable = true;

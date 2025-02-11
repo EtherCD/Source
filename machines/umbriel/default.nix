@@ -29,10 +29,16 @@ in
 
   networking.firewall.allowedTCPPorts = [ 22 445 139 ];
 
-  users.users.ethercd = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "input" "networkmanager" ]; 
-    shell = pkgs.zsh;
+  users.users = {
+    ethercd = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" "input" "networkmanager" ]; 
+      shell = pkgs.zsh;
+    };
+    jrethercd = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" ];
+    };
   };
   i18n.defaultLocale = "en_US.UTF-8";
 

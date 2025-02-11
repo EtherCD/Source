@@ -29,6 +29,7 @@
 		htop
 		btop
 		python311
+		lm_sensors
 
 		home-manager
 		(import ./beefetch)

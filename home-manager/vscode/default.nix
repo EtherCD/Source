@@ -1,8 +1,8 @@
 let 
 
     pkgs = import <nixpkgs> {};
-    fontFamily = "FantasqueSansM Nerd Font";
-    fontSize = 18;
+    fontFamily = "Victor Mono Light";
+    fontSize = 16;
     theme = "Frantic Contrast (rainglow)";
 
 in

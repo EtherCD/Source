@@ -1,3 +1,6 @@
 root
 ./stuff/wallpapers/other
 smb-secrets
+./modules/samba/default.nix
+./machines/umbriel/default.nix
+modules/samba/default.nix

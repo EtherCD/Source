@@ -5,12 +5,12 @@
       linux_xanmod_pkg = { fetchurl, buildLinux, lib, ... } @ args:
 
         buildLinux (args // rec {
-          version = "6.12.9-xanmod1";
+          version = "6.13.2-xanmod1";
           modDirVersion = version;
 
           src = fetchurl {
             url = "https://gitlab.com/xanmod/linux/-/archive/${version}/linux-${version}.tar.gz";
-            hash = "sha256-fp9+HyWAwzjiDC0pVi6/zTaOzb6orHMEZO9D34xyzOE=";
+            hash = "sha256-A0WAuJ5nVvsQ+F3u/oUr9IkPIY/hlLv0NoWo8EgzU40=";
           };
 
           nativeBuildInputs = with pkgs; [

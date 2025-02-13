@@ -23,15 +23,12 @@ in
 
         settings = {
             dynamic_background_opacity = true;
-            background_opacity = "0.7";
-            background_tint = "0.5";
-            #transparent_background_colors = "#282828@0.3";
+            background_opacity = "0.85";
+            #background_tint = "0.5";
             background_blur = 20;
             window_padding_width = 10;
             font_family = "Fantasque Sans Mono";
             font_size = 14;
-            cursor = "#98971a";
-            cursor_text_color = "#b8bb26";
             cursor_shape = "block";
             cursor_blink_interval = "0.5";
             cursor_trail = "3";
@@ -40,23 +37,32 @@ in
             term = "xterm-256color";
             copy_on_select = "clipboard";
 
-            color0 = "#282828";
-            color1 = "#cc241d";
-            color2 = "#98971a";
-            color3 = "#d79921";
-            color4 = "#458588";
-            color5 = "#b16286";
-            color6 = "#689d6a";
-            color7 = "#928374";
-            color8 = "#ebdbb2";
-            color9 = "#fb4934";
-            color10 = "#b8bb26";
-            color11 = "#fabd2f";
-            color12 = "#83a598";
-            color13 = "#d3869b";
-            color14 = "#8ec07c";
-            color15 = "#fbf1c7";
+            background = "#282828";
+            foreground = "#ebdbb2";
 
+            cursor = "#928374";
+
+            selection_foreground = "#928374";
+            selection_background = "#3c3836";
+
+            color0 = "#282828";
+            color8 = "#928374";
+            color1 = "#cc241d";
+            color9 = "#fb4934";
+            color2 = "#98971a";
+            color10 = "#b8bb26";
+            color3 = "#d79921";
+            color11 = "#fabd2d";
+            color4 = "#458588";
+            color12 = "#83a598";
+            color5 = "#b16286";
+            color13 = "#d3869b";
+            color6 = "#689d6a";
+            color14 = "#8ec07c";
+            color7 = "#a89984";
+            color15 = "#928374";
+
+            wheel_scroll_multiplier = "25.0";
         };
     };
 }

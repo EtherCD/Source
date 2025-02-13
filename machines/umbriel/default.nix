@@ -39,6 +39,10 @@ in
       isNormalUser = true;
       extraGroups = [ "wheel" ];
     };
+    mrs = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" ];
+    };
   };
   i18n.defaultLocale = "en_US.UTF-8";
 

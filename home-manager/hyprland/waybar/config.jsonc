@@ -1,0 +1,105 @@
+{
+	"layer": "top",
+	"spacing": 0,
+	"height": 0,
+
+	"margin-top": 8,
+	"margin-right": 8,
+	"margin-bottom": 0,
+	"margin-left": 8,
+
+	"modules-left": ["clock", "hyprland/language"],
+
+	"modules-center": ["hyprland/workspaces"],
+
+	"modules-right": ["tray", "cpu_text", "cpu", "memory", "battery", "network", "pulseaudio", "custom/notification"],
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"disable-scroll": true,
+		"all-outputs": true,
+		"tooltip": false,
+		"format-icons": {
+			"active": "",
+			"default": ""
+		},
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": []
+		}
+	},
+
+	"tray": {
+		"spacing": 10,
+		"tooltip": false
+	},
+
+	"clock": {
+		"format": "{:%H:%M - %a, %d.%m.%Y}",
+		"tooltip": false
+	},
+
+	"cpu": {
+		"format": "{usage}  ",
+		"interval": 2
+	},
+
+	"memory": {
+		"format": "{percentage}  ",
+		"interval": 2,
+
+		"states": {
+			"critical": 80
+		}
+	},
+
+	"battery": {
+		"interval": 5,
+		"format": "{icon} ",
+		"format-icons": ["", "", "", "", ""],
+		"tooltip": true,
+		"tooltip-format": "{capacity}% {power}W"
+	},
+
+	"network": {
+		"format-wifi": "  {bandwidthDownBits}",
+		"format-ethernet": "  {bandwidthDownBits}",
+		"format-disconnected": "NoE",
+		"interval": 5,
+		"tooltip": false
+	},
+
+	"pulseaudio": {
+		"scroll-step": 5,
+		"max-volume": 150,
+		"format": "{icon}  {volume}%",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-icons": ["", "", "", ""],
+		"nospacing": 1,
+		"on-click": "pavucontrol",
+		"tooltip": false
+	},
+
+	"custom/notification": {
+		"tooltip": false,
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "",
+			"none": "",
+			"dnd-notification": "<span foreground='#ea6962'></span>",
+			"dnd-none": "<span foreground='#ea6962'></span>",
+			"inhibited-notification": "",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='#ea6962'></span>",
+			"dnd-inhibited-none": "<span foreground='#ea6962'></span>"
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	}
+}

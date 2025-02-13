@@ -28,28 +28,9 @@
 			./kitty
 			./lsd
 			./bat
+			./zsh
+			./flameshot
 		];
-
-	programs.zsh = {
-		enable = true;
-		enableCompletion = true;
-    syntaxHighlighting.enable = true;
-		shellAliases = {
-			rebuild = "doas nixos-rebuild switch --impure";
-			clean = "doas nix-store --gc";
-			rcode = "doas code --no-sandbox --user-data-dir=/home/ex-root/";
-			ls = "lsd";
-			l = "lsd -l";
-			t = "lsd --tree --depth";
-			c = "bat";
-			#cat = "bat";
-		};
-		oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "half-life";
-    };
-	};
 
 	programs.home-manager = {
 		enable = true;

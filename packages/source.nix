@@ -32,6 +32,27 @@
 		vscode
 		jetbrains.idea-community
 
+		# Stuff for building linux kernel :3
+		coreutils
+    kmod
+    bc
+    cpio
+    gettext
+    libelf
+		elfutils
+    llvm
+    lld
+    clang
+    pahole
+    perl
+    xz
+    zstd
+    linux-firmware
+    modprobed-db
+    clangStdenv	
+		flex
+		bison
+
 
 		# Coding stuff
 		mongodb-compass
@@ -50,6 +71,8 @@
 		gh
 		dnsutils
 		nmap
+
+		dolphin
 
 		amdgpu_top
 
@@ -72,9 +95,9 @@
 		enable = true;
 	};
 	
-	home-manager = {
-		useGlobalPkgs = true;
-	};
+	#home-manager = {
+#		useGlobalPkgs = true;
+#	};
 
 	programs.zsh = {
 		enable = true;
